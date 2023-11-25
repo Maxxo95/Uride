@@ -1,0 +1,61 @@
+{
+	"compiler": {
+		"version": "0.6.9+commit.3e3065ac"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "distance",
+						"type": "uint256"
+					}
+				],
+				"name": "calculateRideFee",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"methods": {}
+		},
+		"userdoc": {
+			"methods": {}
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/TaxiCustomer.sol": "TaxiFeeCalculator"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/TaxiCustomer.sol": {
+			"keccak256": "0xd57358fdad69fb5e812e1d8999482e43ccdfe686d5ad892a6d1994fbfc6c9694",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://cac54d0ac27f5b52342e387dc1fcea559a9dba8dfdeda1f70170fcdbcb5689eb",
+				"dweb:/ipfs/QmaYDWXf9CQgfb4Zdeaj6mHib7yuZCy6vzwxP5wEz8AGmo"
+			]
+		}
+	},
+	"version": 1
+}

@@ -1,0 +1,47 @@
+{
+	"compiler": {
+		"version": "0.6.9+commit.3e3065ac"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			}
+		],
+		"devdoc": {
+			"methods": {}
+		},
+		"userdoc": {
+			"methods": {}
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/DriverRegistry.sol": "HealthInsuranceAgent"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/DriverRegistry.sol": {
+			"keccak256": "0xdb618b05312448dbfc4c9c109fb27f7adfa0aa422e91c4a988ed64a2795e7e57",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://a887535ee95d1a2fa839aef2d4c8974746baf5402b4920fef66bff9ac7d34523",
+				"dweb:/ipfs/QmRHph2sdMHUszTXDnSuUxx84TwohisrySZEyKkWTLPxfY"
+			]
+		}
+	},
+	"version": 1
+}

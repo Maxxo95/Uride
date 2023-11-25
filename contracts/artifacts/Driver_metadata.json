@@ -1,0 +1,67 @@
+{
+	"compiler": {
+		"version": "0.6.9+commit.3e3065ac"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [],
+				"name": "balance",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "contribute",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"methods": {}
+		},
+		"userdoc": {
+			"methods": {}
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/DriverRegistry.sol": "Driver"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/DriverRegistry.sol": {
+			"keccak256": "0x2e2e2b6f268fbea74f6e18a0623be5dc8ee0ce6f7d9a79d12eb08264d7b544ff",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://6696063c772fb4a422cf6ac84f4afd1628f3a9b094a87d9f439115abba9f82f1",
+				"dweb:/ipfs/QmTD5WAB57hrFDjC7qBkwVoG2We27KQsQtfu3SuzaHhv4g"
+			]
+		}
+	},
+	"version": 1
+}
