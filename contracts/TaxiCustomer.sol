@@ -5,15 +5,15 @@ contract TaxiCustomer {
     // Customer attributes
     string public name;
     uint public distanceToTravel;
+    uint256 public balance;
     uint public rideFee; // Added attribute to store the calculated ride fee
     address public owner;
-    uint256 public balance;
 
     // Constructor to initialize customer attributes
-    constructor(string memory _name, uint256 _distanceToTravel) public {
+    constructor(string memory _name, uint256 _distanceToTravel, address _owner) public {
         name = _name;
         distanceToTravel = _distanceToTravel;
-        owner = msg.sender;
+        owner = _owner;
         calculateRideFee(); // Calculate ride fee when the customer is created
     }
 
@@ -33,15 +33,13 @@ contract TaxiCustomer {
         }
     }
 
-    // Function to pay for the ride
-    function payForRide() external payable {
+  // Function to pay for the ride
+    function payForRide(address driverContract) external payable {
         require(msg.value >= rideFee, "Insufficient funds to pay for the ride");
 
-        // Update the balance
-        balance += msg.value;
-        
-        // Additional logic for handling the payment, updating balances, etc.
-        // You can transfer the funds to the driver's address or hold them in the contract.
+        // Transfer funds to the driver's contract
+        (bool success, ) = driverContract.call{value: msg.value}("");
+        require(success, "Payment to driver failed");
     }
 
     // Function to withdraw the balance
@@ -52,6 +50,7 @@ contract TaxiCustomer {
         // Perform the withdrawal
         uint256 amountToWithdraw = balance;
         balance = 0;
-        msg.sender.transfer(amountToWithdraw);
+        (bool success, ) = msg.sender.call{value: amountToWithdraw}("");
+        require(success, "Withdrawal failed");
     }
 }

@@ -16,6 +16,11 @@
 						"internalType": "uint256",
 						"name": "_distanceToTravel",
 						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "_owner",
+						"type": "address"
 					}
 				],
 				"stateMutability": "nonpayable",
@@ -74,7 +79,13 @@
 				"type": "function"
 			},
 			{
-				"inputs": [],
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "driverContract",
+						"type": "address"
+					}
+				],
 				"name": "payForRide",
 				"outputs": [],
 				"stateMutability": "payable",
@@ -138,11 +149,11 @@
 	},
 	"sources": {
 		"contracts/TaxiCustomer.sol": {
-			"keccak256": "0xb8c4b973c2fe19d8827b3cc5c5dd88bdd29bd6819573e70bcd2bf9eb356c0809",
+			"keccak256": "0x94eee89e1615d73ddca80023fd13d8724ff46c3856aa88da1c7d2cc897aa286a",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://a82ee07e8efb8a9460522f2502d771e569556eeb6794fc53279430e7d4c1f084",
-				"dweb:/ipfs/QmSiYgdUeVdZaX15RXTkpJLgX4xyC3hpuh2Bm6FPptbpTX"
+				"bzz-raw://1c7cdca857c12240423a015e06bda09b5a39a7bf011735c9ecba37402001c0a8",
+				"dweb:/ipfs/QmVSvwxceFx5sxQuvdkb8T6J6GJykDpnugmTi9DPiAZsZw"
 			]
 		}
 	},
