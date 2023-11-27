@@ -16,28 +16,10 @@
 						"internalType": "uint256",
 						"name": "_distanceToTravel",
 						"type": "uint256"
-					},
-					{
-						"internalType": "address",
-						"name": "_owner",
-						"type": "address"
 					}
 				],
 				"stateMutability": "nonpayable",
 				"type": "constructor"
-			},
-			{
-				"inputs": [],
-				"name": "balance",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
 			},
 			{
 				"inputs": [],
@@ -54,12 +36,12 @@
 			},
 			{
 				"inputs": [],
-				"name": "name",
+				"name": "driver",
 				"outputs": [
 					{
-						"internalType": "string",
+						"internalType": "address",
 						"name": "",
-						"type": "string"
+						"type": "address"
 					}
 				],
 				"stateMutability": "view",
@@ -67,12 +49,12 @@
 			},
 			{
 				"inputs": [],
-				"name": "owner",
+				"name": "name",
 				"outputs": [
 					{
-						"internalType": "address",
+						"internalType": "string",
 						"name": "",
-						"type": "address"
+						"type": "string"
 					}
 				],
 				"stateMutability": "view",
@@ -116,13 +98,6 @@
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "withdrawBalance",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
 			}
 		],
 		"devdoc": {
@@ -149,11 +124,11 @@
 	},
 	"sources": {
 		"contracts/TaxiCustomer.sol": {
-			"keccak256": "0x94eee89e1615d73ddca80023fd13d8724ff46c3856aa88da1c7d2cc897aa286a",
+			"keccak256": "0xfc04eb0f649dac28661f021b35e36f6eb886840afa6ed0f0b9565f853d935d1b",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://1c7cdca857c12240423a015e06bda09b5a39a7bf011735c9ecba37402001c0a8",
-				"dweb:/ipfs/QmVSvwxceFx5sxQuvdkb8T6J6GJykDpnugmTi9DPiAZsZw"
+				"bzz-raw://5f8df5c946087c96a93e00e4696d2fc6c70236a2ae55ac11b0d3c9bf8b0bbee7",
+				"dweb:/ipfs/QmT6RUnRNpkgsshixhC3JRNkGFEegZqFDpV8cYBHvJYxT9"
 			]
 		}
 	},

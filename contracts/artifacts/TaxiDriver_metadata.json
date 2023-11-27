@@ -158,13 +158,6 @@
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "withdrawEarnings",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
 			}
 		],
 		"devdoc": {
@@ -191,11 +184,11 @@
 	},
 	"sources": {
 		"contracts/TaxiDriver.sol": {
-			"keccak256": "0x895e7004254a13a3611eaff3517b147f43c40390eafd5284447fb1d432e93ee7",
+			"keccak256": "0x290dc3406a4a5a7fa9a1c3fb9e0d0356092e1db89362286785b549543e8665e9",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://72ac2f7b5a56b9e32da3ead39d2d96f8265f369f42d3db0983ad7d6bdc7a4bda",
-				"dweb:/ipfs/QmdMdU1pNCanXsHyq2naW31iZDJEYuLfxun9zX4tq96qip"
+				"bzz-raw://201cbc3d1e46cb7c92cfe634a97cda5ad0b3d3013654d28de9c8c2337b2a2c80",
+				"dweb:/ipfs/QmeSxx7Qf7JwSqLXKcfMjAm7Ev9gmGo6cHwho2nPSDqjGo"
 			]
 		}
 	},

@@ -5,15 +5,15 @@ contract TaxiCustomer {
     // Customer attributes
     string public name;
     uint public distanceToTravel;
-    uint256 public balance;
+    
     uint public rideFee; // Added attribute to store the calculated ride fee
-    address public owner;
+    address public driver;
 
     // Constructor to initialize customer attributes
-    constructor(string memory _name, uint256 _distanceToTravel, address _owner) public {
+    constructor(string memory _name, uint256 _distanceToTravel) public {
         name = _name;
         distanceToTravel = _distanceToTravel;
-        owner = _owner;
+        
         calculateRideFee(); // Calculate ride fee when the customer is created
     }
 
@@ -32,25 +32,15 @@ contract TaxiCustomer {
             rideFee = 10 * 0.5 ether + additionalDistance * 0.7 ether; // 0.7 ether per km after the first 10 km
         }
     }
+ // Function to pay for the ride
+function payForRide(address driverContract) external payable {
+    require(msg.value >= rideFee, "Insufficient funds to pay for the ride");
+ driver = driverContract;
+    // Trigger the payment in the Driver contract using a safer approach
+    (bool success, ) = driverContract.call{value: msg.value}("");
+    require(success, "Payment to driver failed");
+}
 
-  // Function to pay for the ride
-    function payForRide(address driverContract) external payable {
-        require(msg.value >= rideFee, "Insufficient funds to pay for the ride");
 
-        // Transfer funds to the driver's contract
-        (bool success, ) = driverContract.call{value: msg.value}("");
-        require(success, "Payment to driver failed");
-    }
 
-    // Function to withdraw the balance
-    function withdrawBalance() external {
-        require(msg.sender == owner, "Only the owner can withdraw");
-        require(balance > 0, "No balance to withdraw");
-
-        // Perform the withdrawal
-        uint256 amountToWithdraw = balance;
-        balance = 0;
-        (bool success, ) = msg.sender.call{value: amountToWithdraw}("");
-        require(success, "Withdrawal failed");
-    }
 }

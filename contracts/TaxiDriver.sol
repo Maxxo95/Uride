@@ -41,17 +41,7 @@ contract TaxiDriver {
         emit RideEnded(driverAddress);
     }
 
-    // Function to withdraw earnings
-    function withdrawEarnings() external {
-        require(msg.sender == driverAddress, "Only the driver can withdraw earnings");
-        require(earnings > 0, "No earnings to withdraw");
 
-        // Perform the withdrawal
-        uint256 amountToWithdraw = earnings;
-        earnings = 0;
-        emit EarningsWithdrawn(driverAddress, amountToWithdraw);
 
-        // Transfer the earnings to the driver's address
-        msg.sender.transfer(amountToWithdraw);
-    }
+   
 }

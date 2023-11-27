@@ -6,46 +6,123 @@
 	"output": {
 		"abi": [
 			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_driverName",
+						"type": "string"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
 				"anonymous": false,
 				"inputs": [
 					{
-						"indexed": false,
-						"internalType": "uint256",
-						"name": "rideId",
-						"type": "uint256"
-					},
-					{
 						"indexed": true,
 						"internalType": "address",
-						"name": "user",
+						"name": "driverAddress",
 						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
 					}
 				],
-				"name": "RideBooked",
+				"name": "EarningsWithdrawn",
 				"type": "event"
 			},
 			{
 				"anonymous": false,
 				"inputs": [
 					{
-						"indexed": false,
-						"internalType": "uint256",
-						"name": "rideId",
-						"type": "uint256"
-					},
-					{
 						"indexed": true,
 						"internalType": "address",
-						"name": "user",
+						"name": "driverAddress",
 						"type": "address"
 					}
 				],
-				"name": "RideCompleted",
+				"name": "RideEnded",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "driverAddress",
+						"type": "address"
+					}
+				],
+				"name": "RideStarted",
 				"type": "event"
 			},
 			{
 				"inputs": [],
-				"name": "bookRide",
+				"name": "driverAddress",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "driverEarnings",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "driverName",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "endRide",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "isDriverAvailable",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "payForRide",
 				"outputs": [],
 				"stateMutability": "payable",
 				"type": "function"
@@ -53,52 +130,33 @@
 			{
 				"inputs": [
 					{
-						"internalType": "uint256",
-						"name": "_rideId",
-						"type": "uint256"
+						"internalType": "bool",
+						"name": "_isAvailable",
+						"type": "bool"
 					}
 				],
-				"name": "completeRide",
+				"name": "setDriverAvailability",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
 				"inputs": [],
-				"name": "rideCount",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
+				"name": "startRide",
+				"outputs": [],
+				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"name": "rides",
-				"outputs": [
-					{
-						"internalType": "address",
-						"name": "user",
-						"type": "address"
-					},
-					{
-						"internalType": "bool",
-						"name": "completed",
-						"type": "bool"
-					}
-				],
-				"stateMutability": "view",
+				"inputs": [],
+				"name": "withdrawEarnings",
+				"outputs": [],
+				"stateMutability": "nonpayable",
 				"type": "function"
+			},
+			{
+				"stateMutability": "payable",
+				"type": "receive"
 			}
 		],
 		"devdoc": {
@@ -110,7 +168,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/DriverRegistry.sol": "TaxiService"
+			"contracts/TaxiCustomer.sol": "TaxiService"
 		},
 		"evmVersion": "istanbul",
 		"libraries": {},
@@ -124,12 +182,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/DriverRegistry.sol": {
-			"keccak256": "0xea0d44647e0131ff20f9da25b1620aa6bf9d5bff75412b7f739b38023224031d",
+		"contracts/TaxiCustomer.sol": {
+			"keccak256": "0x3bbab0bf390aa640713d00265dea820dd7b726da430a11efac0d0aa98243efff",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://eb4ee2dc24d0b4f5b0255480ec2e8624b09aeb154d4c7f80ff49feb244a82b58",
-				"dweb:/ipfs/QmXVNM54v4BdiaHRfMMJvX993T7X1XbUZ47qkJGqiL3CQE"
+				"bzz-raw://463d715b2c90d6cbe16afee09106b40281689d221387f2d5d8d05a08a93525e0",
+				"dweb:/ipfs/Qma4YgxqxJfQXcdkVBo1GWD6LCmqUCHdccnx66nzAsMcoG"
 			]
 		}
 	},
