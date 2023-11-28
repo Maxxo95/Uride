@@ -43,25 +43,6 @@
 						"internalType": "address",
 						"name": "driverAddress",
 						"type": "address"
-					},
-					{
-						"indexed": false,
-						"internalType": "uint256",
-						"name": "amount",
-						"type": "uint256"
-					}
-				],
-				"name": "EarningsWithdrawn",
-				"type": "event"
-			},
-			{
-				"anonymous": false,
-				"inputs": [
-					{
-						"indexed": true,
-						"internalType": "address",
-						"name": "driverAddress",
-						"type": "address"
 					}
 				],
 				"name": "RideEnded",
@@ -81,6 +62,19 @@
 				"type": "event"
 			},
 			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "driverAddress",
+						"type": "address"
+					}
+				],
+				"name": "turnedOff",
+				"type": "event"
+			},
+			{
 				"inputs": [],
 				"name": "driverAddress",
 				"outputs": [
@@ -88,19 +82,6 @@
 						"internalType": "address",
 						"name": "",
 						"type": "address"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "earnings",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
 					}
 				],
 				"stateMutability": "view",
@@ -140,21 +121,15 @@
 				"type": "function"
 			},
 			{
-				"inputs": [
-					{
-						"internalType": "bool",
-						"name": "_isAvailable",
-						"type": "bool"
-					}
-				],
-				"name": "setAvailability",
+				"inputs": [],
+				"name": "startRide",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
 				"inputs": [],
-				"name": "startRide",
+				"name": "turnOff",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
@@ -184,11 +159,11 @@
 	},
 	"sources": {
 		"contracts/TaxiDriver.sol": {
-			"keccak256": "0x290dc3406a4a5a7fa9a1c3fb9e0d0356092e1db89362286785b549543e8665e9",
+			"keccak256": "0x9050046e1640e0feec08ae56b65eb5cf785519aedfd79cce0a7d3b826f7b68ae",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://201cbc3d1e46cb7c92cfe634a97cda5ad0b3d3013654d28de9c8c2337b2a2c80",
-				"dweb:/ipfs/QmeSxx7Qf7JwSqLXKcfMjAm7Ev9gmGo6cHwho2nPSDqjGo"
+				"bzz-raw://24b14f7770f8d19d2b6d02b35fb6f59bcd55e7a450d8d606c349b531bba1053c",
+				"dweb:/ipfs/Qmd35ezFbBGDL336WLTQGkUYVrWCiYApMihZ4Z7gZjniRZ"
 			]
 		}
 	},
