@@ -1,45 +1,45 @@
 // SPDX-License-Identifier: GPL-3.0
 pragma solidity ^0.6.9;
 
+import "./RideManager.sol";
+
 contract TaxiCustomer {
     // Customer attributes
     string public name;
     uint public distanceToTravel;
-    
+    address public customerAddress;
     uint public rideFee; // Added attribute to store the calculated ride fee
-    address public driver;
+    uint public balanceReceived;
+    RideManager public manager;
+    
+      // Events
+     event CustomerRegistered(address indexed customerAddress, string name);
+     
 
     // Constructor to initialize customer attributes
-     uint public balanceReceived;
-    
-    function addToBalance()public payable { 
-        balanceReceived += msg.value;
+    constructor(string memory _name) public {
+        name = _name;
+       customerAddress = msg.sender;
+       emit CustomerRegistered(customerAddress, name);
     }
-
-    function getBalance() public view returns(uint){
-        return address(this).balance;
-    }
-
     function withdrawMoney() public{
         address payable to = payable(msg.sender);
         to.transfer(getBalance());
     }
-    function payForRide(address payable _to) public {
-         _to.transfer(rideFee);
+     function getBalance() public view returns(uint){
+        return address(this).balance;
     }
-    constructor(string memory _name, uint256 _distanceToTravel) public {
-        name = _name;
-        distanceToTravel = _distanceToTravel;
-        
-        calculateRideFee(); // Calculate ride fee when the customer is created
+    function getFee() public view returns(uint){
+        return rideFee;
     }
-
     // Function to update the distance to travel
-    function updateDistanceToTravel(uint256 _newDistance) external {
+    function DistanceToTravel(uint256 _newDistance) external {
         distanceToTravel = _newDistance;
         calculateRideFee(); // Recalculate ride fee when distance is updated
     }
-
+          function addToBalance()public payable { 
+        balanceReceived += msg.value;
+    }
     // Function to calculate the ride fee
     function calculateRideFee() internal {
         if (distanceToTravel <= 10) {
@@ -50,7 +50,16 @@ contract TaxiCustomer {
         }
     }
 
+    // Function to request a ride
+    function requestRide( address _customerAddress) external {
+          manager = RideManager(_customerAddress);
+       manager.requestRide() ;
+    }
+     
+    
 
-
-
+    // Function to pay for the ride
+   function payforRide(address payable _to) public {
+         _to.transfer(getFee());
+    }
 }

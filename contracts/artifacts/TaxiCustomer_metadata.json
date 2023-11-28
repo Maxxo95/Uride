@@ -11,15 +11,49 @@
 						"internalType": "string",
 						"name": "_name",
 						"type": "string"
-					},
-					{
-						"internalType": "uint256",
-						"name": "_distanceToTravel",
-						"type": "uint256"
 					}
 				],
 				"stateMutability": "nonpayable",
 				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "customerAddress",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					}
+				],
+				"name": "CustomerRegistered",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_newDistance",
+						"type": "uint256"
+					}
+				],
+				"name": "DistanceToTravel",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "addToBalance",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
 			},
 			{
 				"inputs": [],
@@ -29,6 +63,19 @@
 						"internalType": "uint256",
 						"name": "",
 						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "customerAddress",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
 					}
 				],
 				"stateMutability": "view",
@@ -49,12 +96,12 @@
 			},
 			{
 				"inputs": [],
-				"name": "driver",
+				"name": "getBalance",
 				"outputs": [
 					{
-						"internalType": "address",
+						"internalType": "uint256",
 						"name": "",
-						"type": "address"
+						"type": "uint256"
 					}
 				],
 				"stateMutability": "view",
@@ -62,12 +109,25 @@
 			},
 			{
 				"inputs": [],
-				"name": "getBalance",
+				"name": "getFee",
 				"outputs": [
 					{
 						"internalType": "uint256",
 						"name": "",
 						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "manager",
+				"outputs": [
+					{
+						"internalType": "contract RideManager",
+						"name": "",
+						"type": "address"
 					}
 				],
 				"stateMutability": "view",
@@ -94,16 +154,22 @@
 						"type": "address"
 					}
 				],
-				"name": "payForRide",
+				"name": "payforRide",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
-				"inputs": [],
-				"name": "reciveMoney",
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_customerAddress",
+						"type": "address"
+					}
+				],
+				"name": "requestRide",
 				"outputs": [],
-				"stateMutability": "payable",
+				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
@@ -117,19 +183,6 @@
 					}
 				],
 				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "_newDistance",
-						"type": "uint256"
-					}
-				],
-				"name": "updateDistanceToTravel",
-				"outputs": [],
-				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
@@ -163,12 +216,20 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/TaxiCustomer.sol": {
-			"keccak256": "0xf95f0d1a48746f074814b4fa42f437d53fc434b540ba8466a435837eccb1e8cd",
+		"contracts/RideManager.sol": {
+			"keccak256": "0x99b91fc43bac0324000dc79f0c5c2d80ae83870d46ca39c3fd602a666c69648e",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://3c5faa305889d9c47b60b476c3626d729d698ead2fda515ef535043331d8320a",
-				"dweb:/ipfs/QmdjmVPKKXAgv5Lep7ejxi91JpwUZw8UM52W5mT3VX381v"
+				"bzz-raw://3c42701289cd08fdec6662775c23cd1816bd5e6998546f5f39d0d71589181eae",
+				"dweb:/ipfs/QmcTVtypBpYYqjsT7TneZq4Eajvv95YtEJYC8EDKykekf2"
+			]
+		},
+		"contracts/TaxiCustomer.sol": {
+			"keccak256": "0x23c97911b586441dd6595ddbbd8d3c651a7a48d09dc520bff708d92796a9f9d3",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://e3ab3adf0e66c16e1a5104139ca2883ce9d3a4653c4956840f8069635400e9f9",
+				"dweb:/ipfs/QmT5RgGrJ8xAoMbMMydwxots75Pv1dcM6qDFqMsxCDhNDp"
 			]
 		}
 	},

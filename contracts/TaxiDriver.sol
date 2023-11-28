@@ -1,19 +1,19 @@
 // SPDX-License-Identifier: GPL-3.0
 pragma solidity ^0.6.9;
-
+import "./RideManager.sol";
 contract TaxiDriver {
     // Driver attributes
     string public name;
     address public driverAddress;
     bool public isAvailable;
-    
+    RideManager public manager;
 
     // Events
     event DriverRegistered(address indexed driverAddress, string name);
     event RideStarted(address indexed driverAddress);
     event RideEnded(address indexed driverAddress);
    event turnedOff(address indexed driverAddress);
-
+   
     // Constructor to register the driver
     constructor(string memory _name) public {
         name = _name;
@@ -21,6 +21,13 @@ contract TaxiDriver {
         isAvailable = true;
         emit DriverRegistered(driverAddress, name);
     }
+    
+ function acceptRide(address  _driverAddress) external {
+    manager = RideManager(_driverAddress);
+    manager.acceptRide();
+}
+
+
 
     // Function to set availability status
 function turnOff() external {

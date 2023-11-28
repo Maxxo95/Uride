@@ -75,6 +75,19 @@
 				"type": "event"
 			},
 			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_driverAddress",
+						"type": "address"
+					}
+				],
+				"name": "acceptRide",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
 				"inputs": [],
 				"name": "driverAddress",
 				"outputs": [
@@ -102,6 +115,19 @@
 						"internalType": "bool",
 						"name": "",
 						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "manager",
+				"outputs": [
+					{
+						"internalType": "contract RideManager",
+						"name": "",
+						"type": "address"
 					}
 				],
 				"stateMutability": "view",
@@ -158,12 +184,20 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/TaxiDriver.sol": {
-			"keccak256": "0x9050046e1640e0feec08ae56b65eb5cf785519aedfd79cce0a7d3b826f7b68ae",
+		"contracts/RideManager.sol": {
+			"keccak256": "0x99b91fc43bac0324000dc79f0c5c2d80ae83870d46ca39c3fd602a666c69648e",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://24b14f7770f8d19d2b6d02b35fb6f59bcd55e7a450d8d606c349b531bba1053c",
-				"dweb:/ipfs/Qmd35ezFbBGDL336WLTQGkUYVrWCiYApMihZ4Z7gZjniRZ"
+				"bzz-raw://3c42701289cd08fdec6662775c23cd1816bd5e6998546f5f39d0d71589181eae",
+				"dweb:/ipfs/QmcTVtypBpYYqjsT7TneZq4Eajvv95YtEJYC8EDKykekf2"
+			]
+		},
+		"contracts/TaxiDriver.sol": {
+			"keccak256": "0x99412e1edde313dc28c3b69970b68a5891a64b5918144d78a9083ecb371a597c",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://138bb08d2c5fad7586ef3bc106b8be1759cc22b22005875ff8a0705e0233ab92",
+				"dweb:/ipfs/QmdueGKCe6t2CEYGv2iqoVB77BEdCZmgzAhP45YyJbs52w"
 			]
 		}
 	},
