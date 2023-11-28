@@ -10,6 +10,23 @@ contract TaxiCustomer {
     address public driver;
 
     // Constructor to initialize customer attributes
+     uint public balanceReceived;
+    
+    function addToBalance()public payable { 
+        balanceReceived += msg.value;
+    }
+
+    function getBalance() public view returns(uint){
+        return address(this).balance;
+    }
+
+    function withdrawMoney() public{
+        address payable to = payable(msg.sender);
+        to.transfer(getBalance());
+    }
+    function payForRide(address payable _to) public {
+         _to.transfer(rideFee);
+    }
     constructor(string memory _name, uint256 _distanceToTravel) public {
         name = _name;
         distanceToTravel = _distanceToTravel;
@@ -32,14 +49,7 @@ contract TaxiCustomer {
             rideFee = 10 * 0.5 ether + additionalDistance * 0.7 ether; // 0.7 ether per km after the first 10 km
         }
     }
- // Function to pay for the ride
-function payForRide(address driverContract) external payable {
-    require(msg.value >= rideFee, "Insufficient funds to pay for the ride");
- driver = driverContract;
-    // Trigger the payment in the Driver contract using a safer approach
-    (bool success, ) = driverContract.call{value: msg.value}("");
-    require(success, "Payment to driver failed");
-}
+
 
 
 

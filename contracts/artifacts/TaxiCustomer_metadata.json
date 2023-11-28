@@ -23,6 +23,19 @@
 			},
 			{
 				"inputs": [],
+				"name": "balanceReceived",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
 				"name": "distanceToTravel",
 				"outputs": [
 					{
@@ -49,6 +62,19 @@
 			},
 			{
 				"inputs": [],
+				"name": "getBalance",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
 				"name": "name",
 				"outputs": [
 					{
@@ -63,12 +89,19 @@
 			{
 				"inputs": [
 					{
-						"internalType": "address",
-						"name": "driverContract",
+						"internalType": "address payable",
+						"name": "_to",
 						"type": "address"
 					}
 				],
 				"name": "payForRide",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "reciveMoney",
 				"outputs": [],
 				"stateMutability": "payable",
 				"type": "function"
@@ -98,6 +131,13 @@
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "withdrawMoney",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
 			}
 		],
 		"devdoc": {
@@ -124,11 +164,11 @@
 	},
 	"sources": {
 		"contracts/TaxiCustomer.sol": {
-			"keccak256": "0xfc04eb0f649dac28661f021b35e36f6eb886840afa6ed0f0b9565f853d935d1b",
+			"keccak256": "0xf95f0d1a48746f074814b4fa42f437d53fc434b540ba8466a435837eccb1e8cd",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://5f8df5c946087c96a93e00e4696d2fc6c70236a2ae55ac11b0d3c9bf8b0bbee7",
-				"dweb:/ipfs/QmT6RUnRNpkgsshixhC3JRNkGFEegZqFDpV8cYBHvJYxT9"
+				"bzz-raw://3c5faa305889d9c47b60b476c3626d729d698ead2fda515ef535043331d8320a",
+				"dweb:/ipfs/QmdjmVPKKXAgv5Lep7ejxi91JpwUZw8UM52W5mT3VX381v"
 			]
 		}
 	},
