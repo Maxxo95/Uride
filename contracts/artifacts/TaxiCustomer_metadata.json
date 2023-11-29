@@ -217,19 +217,19 @@
 	},
 	"sources": {
 		"contracts/RideManager.sol": {
-			"keccak256": "0x99b91fc43bac0324000dc79f0c5c2d80ae83870d46ca39c3fd602a666c69648e",
+			"keccak256": "0xb98a48c6eda0c0b540a3a6abe7aecd27874b55e53c018d2af23d664ad8fdb04d",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://3c42701289cd08fdec6662775c23cd1816bd5e6998546f5f39d0d71589181eae",
-				"dweb:/ipfs/QmcTVtypBpYYqjsT7TneZq4Eajvv95YtEJYC8EDKykekf2"
+				"bzz-raw://3ac243f4b5da3342ec5fe70f871f51a9f6dc4f2c53258615bcdac704c2fa7ba6",
+				"dweb:/ipfs/Qma4hqgq81CnDhM4d1WXNcudkanYWyHY4PFjeJqDmPEDXb"
 			]
 		},
 		"contracts/TaxiCustomer.sol": {
-			"keccak256": "0x23c97911b586441dd6595ddbbd8d3c651a7a48d09dc520bff708d92796a9f9d3",
+			"keccak256": "0x6bbcec90b1a925f96b89c5042b82ab5cb88fb79126b9d6b09e1b40cf417ca96a",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://e3ab3adf0e66c16e1a5104139ca2883ce9d3a4653c4956840f8069635400e9f9",
-				"dweb:/ipfs/QmT5RgGrJ8xAoMbMMydwxots75Pv1dcM6qDFqMsxCDhNDp"
+				"bzz-raw://297f919278941a78f642e7713d33173d168bbfba76088d3504761da260be84e1",
+				"dweb:/ipfs/QmQbNAEDGAd8hVsvKzvoCFPQoqmhTaYKqV78F24rV1HHu9"
 			]
 		}
 	},

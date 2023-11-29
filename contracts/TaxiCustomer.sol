@@ -51,9 +51,9 @@ contract TaxiCustomer {
     }
 
     // Function to request a ride
-    function requestRide( address _customerAddress) external {
-          manager = RideManager(_customerAddress);
-       manager.requestRide() ;
+    function requestRide( address _managerAddress) external {
+          manager = RideManager(_managerAddress);
+       manager.requestRide(customerAddress) ;
     }
      
     

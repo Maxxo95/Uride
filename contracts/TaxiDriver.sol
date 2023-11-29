@@ -5,7 +5,7 @@ contract TaxiDriver {
     // Driver attributes
     string public name;
     address public driverAddress;
-    bool public isAvailable;
+    bool public isAvailable = false;
     RideManager public manager;
 
     // Events
@@ -22,9 +22,9 @@ contract TaxiDriver {
         emit DriverRegistered(driverAddress, name);
     }
     
- function acceptRide(address  _driverAddress) external {
-    manager = RideManager(_driverAddress);
-    manager.acceptRide();
+ function acceptRide(address  _manAdd) external {
+    manager = RideManager(_manAdd);
+    manager.acceptRide(driverAddress);
 }
 
 
@@ -37,6 +37,8 @@ function turnOff() external {
         isAvailable = false;
     } else {
         isAvailable = true;
+        
+      
     }
 
     emit turnedOff(driverAddress);

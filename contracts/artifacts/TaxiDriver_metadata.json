@@ -78,7 +78,7 @@
 				"inputs": [
 					{
 						"internalType": "address",
-						"name": "_driverAddress",
+						"name": "_manAdd",
 						"type": "address"
 					}
 				],
@@ -185,19 +185,19 @@
 	},
 	"sources": {
 		"contracts/RideManager.sol": {
-			"keccak256": "0x99b91fc43bac0324000dc79f0c5c2d80ae83870d46ca39c3fd602a666c69648e",
+			"keccak256": "0xb9f7e69949cc0ff0ddde03002102a8f0477183db38142489b94c4d087d49c4ba",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://3c42701289cd08fdec6662775c23cd1816bd5e6998546f5f39d0d71589181eae",
-				"dweb:/ipfs/QmcTVtypBpYYqjsT7TneZq4Eajvv95YtEJYC8EDKykekf2"
+				"bzz-raw://e9e2594781d2dffa17acb7a578530cb27bc1bb48e10f8a134447c8c97f170b00",
+				"dweb:/ipfs/QmcStjCE2Bi3HUSwrREx6zpjTGYmceSwW1KxwJxgT3TW2k"
 			]
 		},
 		"contracts/TaxiDriver.sol": {
-			"keccak256": "0x99412e1edde313dc28c3b69970b68a5891a64b5918144d78a9083ecb371a597c",
+			"keccak256": "0xa4a74939d144922953fdf7b16a76ee3e42267d4badb694ce2945a4aa23e2a23c",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://138bb08d2c5fad7586ef3bc106b8be1759cc22b22005875ff8a0705e0233ab92",
-				"dweb:/ipfs/QmdueGKCe6t2CEYGv2iqoVB77BEdCZmgzAhP45YyJbs52w"
+				"bzz-raw://257041b383bb495ad9eff17f084b5cc05e888e229a0bcf5021afba2526221154",
+				"dweb:/ipfs/QmehzSbHPKHnb43SL3QHNfH9j76m8iFHi1ige3HC8pw9Mv"
 			]
 		}
 	},

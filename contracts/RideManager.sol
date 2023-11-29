@@ -6,7 +6,7 @@ pragma solidity ^0.6.9;
 
 
 contract RideManager {
-   
+    
     event RideRequested(address indexed customer);
     event RideAccepted(address indexed driver, address indexed customer);
     event RideCompleted(address indexed driver, address indexed customer);
@@ -15,15 +15,15 @@ contract RideManager {
     address public currentCustomer;
     
 
-    function requestRide() external {
-        currentCustomer = msg.sender;
-        emit RideRequested(msg.sender);
+    function requestRide(address _num) external {
+        currentCustomer = _num;
+        emit RideRequested(currentCustomer);
         
     }
 
-    function acceptRide() external {
-        currentDriver = msg.sender;
-        emit RideAccepted(msg.sender, currentCustomer);
+    function acceptRide(address _num) external {
+        currentDriver = _num;
+        emit RideAccepted(currentDriver, currentCustomer);
     }
 
     function completeRide() external {

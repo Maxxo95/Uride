@@ -57,7 +57,13 @@
 				"type": "event"
 			},
 			{
-				"inputs": [],
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_num",
+						"type": "address"
+					}
+				],
 				"name": "acceptRide",
 				"outputs": [],
 				"stateMutability": "nonpayable",
@@ -97,7 +103,13 @@
 				"type": "function"
 			},
 			{
-				"inputs": [],
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_num",
+						"type": "address"
+					}
+				],
 				"name": "requestRide",
 				"outputs": [],
 				"stateMutability": "nonpayable",
@@ -128,11 +140,11 @@
 	},
 	"sources": {
 		"contracts/RideManager.sol": {
-			"keccak256": "0x407a46862bcc2f040024c8d343a36b82934fe305aa6ae1663645f63babb529fa",
+			"keccak256": "0xb9f7e69949cc0ff0ddde03002102a8f0477183db38142489b94c4d087d49c4ba",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://071351b3563fa4ff7dc7183b4a13bf620b144445a455ceaf030e6b92e21a7154",
-				"dweb:/ipfs/QmbgKBCN9WN5hauEE3z8ixzaCjcnP38ZKMB8drzDdq2VzZ"
+				"bzz-raw://e9e2594781d2dffa17acb7a578530cb27bc1bb48e10f8a134447c8c97f170b00",
+				"dweb:/ipfs/QmcStjCE2Bi3HUSwrREx6zpjTGYmceSwW1KxwJxgT3TW2k"
 			]
 		}
 	},
